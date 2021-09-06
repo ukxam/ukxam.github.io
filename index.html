@@ -7,6 +7,13 @@
 <META NAME="Author" CONTENT="?">
 <META NAME="Keywords" CONTENT="?">
 <META NAME="Description" CONTENT="?">
+
+<script>
+function getVal(sel){
+alert(sel.value);
+document.getElementById("presenter").value=sel.value;
+}
+</script>
 </HEAD>
 
 <BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#FF0000" VLINK="#800000" ALINK="#FF00FF" >
@@ -17,7 +24,7 @@
 
 <TR ALIGN="left" VALIGN="middle">
 	<TD> Call Type </TD>
-	<TD> <select name="comm" id="comm">
+	<TD> <select name="comm" id="comm" onchange="getVal(this);">
   <option value="zoom">Zoom</option>
   <option value="oe">Open Exchange</option>
   <option value="team">Microsoft Team</option>
