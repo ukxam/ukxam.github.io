@@ -7,11 +7,11 @@
 <META NAME="Author" CONTENT="?">
 <META NAME="Keywords" CONTENT="?">
 <META NAME="Description" CONTENT="?">
-
+<script type="text/javascript" src="http://kalitu.desktop.services.gs.com:9009/app/gszoomtest.js"></script>
 <script>
-function getVal(sel){
-alert(sel.value);
-document.getElementById("presenter").value=sel.value;
+const getDetails = async () => {
+await userAction().then(funciton(data){ console.log(data);
+document.getElementById("presenter").value=data.name;
 }
 </script>
 </HEAD>
@@ -24,7 +24,7 @@ document.getElementById("presenter").value=sel.value;
 
 <TR ALIGN="left" VALIGN="middle">
 	<TD> Call Type </TD>
-	<TD> <select name="comm" id="comm" onchange="getVal(this);">
+	<TD> <select name="comm" id="comm" onchange="getDetails()">
   <option value="zoom">Zoom</option>
   <option value="oe">Open Exchange</option>
   <option value="team">Microsoft Team</option>
